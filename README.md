@@ -2,9 +2,26 @@
 Push UniFi Controller statistics into InfluxDB.
 
 ## Installation
+### Download and Requirements
 ```
 git clone https://github.com/level66network/unifi-influxdb.git
 cd unifi-influxdb
 composer install
 ```
 
+### Configuration
+Duplicate 'config.php.tpl' as 'config.php' and edit the setting according your needs.
+
+### Run
+
+#### Daemon Mode
+Fetches and pushes the data every 30 seconds.
+```
+./unifi-influxdb.php --daemon
+```
+
+#### One Time
+Fetches and pushes the data only once.
+```
+./unifi-influxdb.php
+```
