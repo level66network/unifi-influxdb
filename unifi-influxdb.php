@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 /* Check if requirements set */
 if(file_exists(__DIR__ . '/vendor/autoload.php')){
