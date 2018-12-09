@@ -25,3 +25,11 @@ Fetches and pushes the data only once.
 ```
 ./unifi-influxdb.php
 ```
+
+### systemd
+```
+cp systemd/system/unifi-influxdb.service /etc/systemd/system/unifi-influxdb.service
+/bin/systemctl enable unifi-influxdb.service
+/bin/systemctl start unifi-influxdb.service
+```
+

@@ -1,0 +1,10 @@
+[Unit]
+Description=UniFi Controller to InfluxDB
+After=syslog.target
+
+[Service]
+ExecStart=/opt/unifi-influxdb/unifi-influxdb.php --daemon
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
