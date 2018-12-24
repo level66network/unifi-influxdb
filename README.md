@@ -30,6 +30,7 @@ Fetches and pushes the data only once.
 ### systemd
 ```
 cp systemd/system/unifi-influxdb.service /etc/systemd/system/unifi-influxdb.service
+/bin/systemctl daemon-reload
 /bin/systemctl enable unifi-influxdb.service
 /bin/systemctl start unifi-influxdb.service
 ```
