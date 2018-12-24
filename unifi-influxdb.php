@@ -33,16 +33,8 @@ if($cfg['INFLUXDB']['USER'] and $cfg['INFLUXDB']['PASSWORD']){
 	$influxdb = new InfluxDB\Client($cfg['INFLUXDB']['HOST'], $cfg['INFLUXDB']['PORT'], null, null, $cfg['INFLUXDB']['SSL']);
 }
 
-/* Test InfluxDB connection */
-if($influxdb->listDatabases() === false){
-	exit('Connection to InfluxDB not working properly!');
-}
-
 /* Use InfluxDB database and check if exsists */
 $db = $influxdb->selectDB($cfg['INFLUXDB']['DB']);
-if(!$db->exists()){
-	exit('Database ' . $cfg['INFLUXDB']['DB'] . ' does not exsist in InfluxDB. Please create the database and start over again!');
-}
 
 /* Check UniFi Controller login */
 if($unifi->login()){
