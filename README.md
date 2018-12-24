@@ -4,7 +4,7 @@ Push UniFi Controller statistics into InfluxDB.
 ## Installation
 ### Download and Requirements
 ```
-apt install php7.2-common php7.2-curl composer unzip
+apt install php7.2-cli php7.2-curl composer unzip
 git clone https://github.com/level66network/unifi-influxdb.git
 cd unifi-influxdb
 composer install
