@@ -1,6 +1,6 @@
 [Unit]
 Description=UniFi Controller to InfluxDB
-After=syslog.target
+After=unifi.service
 
 [Service]
 ExecStart=/opt/unifi-influxdb/unifi-influxdb.php --daemon
